@@ -1,0 +1,38 @@
+//----------------------------------------------------------------------------
+// ObjectWindows - (C) Copyright 1993 by Borland International
+//----------------------------------------------------------------------------
+#define IDC_BITMAP1	10
+#define POKERBMP	1010
+#define IDI_POKERICON	130
+//
+//Dinamically construted Objects
+#define IDC_REDBUTTON 100
+#define IDC_BLACKBUTTON 101
+#define IDC_MHBRCARD 102
+//
+#define IDD_POKER 105
+#define IDD_ABOUT	106
+//
+//
+#define IDM_MENU 106
+#define CM_ABOUT	101
+//
+//
+#define IDC_MHCARDDECK1	11
+#define IDC_MHCARDDECK5	15
+#define IDC_MHCARDDECK6	16
+#define IDC_LISTBOX1	17
+#define IDC_LISTBOX2	21
+#define IDC_STATIC2	22
+#define IDC_STATIC1	23
+#define IDC_REDBTN	26
+#define IDC_BLACKBTN	27
+#define IDC_DOUBLECARD	28
+#define IDC_MAXBETBUTTON	24
+#define IDC_CREDITBUTTON	18
+#define IDC_DOUBLEBUTTON	19
+#define IDC_BETBUTTON	20
+#define IDC_MHCARDDECK4	14
+#define IDC_MHCARDDECK3	13
+#define IDC_MHCARDDECK2	12
+

@@ -1,0 +1,121 @@
+//----------------------------------------------------------------------------
+// ObjectWindows - (C) Copyright 1991, 1993 by Borland International
+//----------------------------------------------------------------------------
+#ifdef RC_INVOKED
+#ifndef WORKSHOP_INVOKED
+  #include <windows.h>
+#endif
+#include <owl\except.rc>
+#include "owpoker.rh"
+
+IDM_MENU MENU 
+{
+ POPUP "&Help", HELP
+ {
+  MENUITEM "&About", CM_ABOUT
+ }
+
+}
+
+IDD_POKER DIALOG 16, 57, 309, 158
+STYLE WS_CHILD | WS_VISIBLE | WS_DLGFRAME
+CLASS "bordlg"
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_MHCARDDECK1, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 124, 6, 41, 59
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_MHCARDDECK2, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 169, 6, 41, 59
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_MHCARDDECK3, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 215, 6, 41, 59
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_MHCARDDECK4, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 124, 69, 41, 59
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_MHCARDDECK5, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 169, 69, 41, 59
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_MHCARDDECK6, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 215, 69, 41, 59
+ CONTROL "AMSPoker v.1.1", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 126, 133, 55, 7
+ CONTROL "by A.SOARES", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 126, 140, 55, 8
+ CONTROL "", -1, "BorShade", BSS_RGROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 120, 3, 140, 152
+ CONTROL "", IDRETRY, "BorBtn", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 263, 129, 37, 25
+ LISTBOX IDC_LISTBOX1, 10, 5, 72, 76, LBS_NOTIFY | WS_BORDER | LBS_NOINTEGRALHEIGHT
+ CONTROL "&Credit", IDC_CREDITBUTTON, "BorBtn", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 263, 6, 37, 25
+ CONTROL "&Double", IDC_DOUBLEBUTTON, "BorBtn", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 263, 33, 37, 25
+ CONTROL "&Bet", IDC_BETBUTTON, "BorBtn", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 263, 60, 37, 25
+ LISTBOX IDC_LISTBOX2, 88, 5, 23, 76, LBS_NOTIFY | WS_BORDER | LBS_NOINTEGRALHEIGHT
+ CONTROL "", -1, "BorShade", BSS_RGROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 187, 131, 69, 21
+ LTEXT "Win :", -1, 190, 133, 28, 8
+ RTEXT "Credits :", -1, 190, 143, 28, 8
+ RTEXT "", IDC_STATIC2, 220, 133, 28, 8
+ RTEXT "", IDC_STATIC1, 220, 143, 28, 8
+ CONTROL "", IDC_REDBTN, "BorBtn", BS_PUSHBUTTON | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 75, 92, 30, 26
+ CONTROL "", IDC_BLACKBTN, "BorBtn", BS_PUSHBUTTON | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 75, 125, 30, 26
+ CONTROL "MHCD200.VBX;MhCardDeck;MhCardDeck11", IDC_DOUBLECARD, "VBControl", 0 | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 16, 91, 41, 59
+ CONTROL "", -1, "BorShade", BSS_GROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 9, 86, 103, 69
+ CONTROL "", -1, "BorShade", BSS_VDIP | BSS_LEFT | WS_CHILD | WS_VISIBLE, 64, 89, 4, 64
+ CONTROL "&MaxBet", IDC_MAXBETBUTTON, "BorBtn", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 263, 87, 37, 25
+}
+
+IDD_POKER DLGINIT 
+{
+    11, 0x0400, 49L,
+0x0a00, 0x684d, 0x6143, 0x6472, 0x6544, 0x6b63, 0x0001, 0x0200, 0xff06,
+0x07ff, 0xffff, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b, 0x000c, 0x000d,
+0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    12, 0x0400, 49L,
+0x0a00, 0x684d, 0x6143, 0x6472, 0x6544, 0x6b63, 0x0001, 0x0200, 0xff06,
+0x07ff, 0xffff, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b, 0x000c, 0x000d,
+0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    13, 0x0400, 49L,
+0x0a00, 0x684d, 0x6143, 0x6472, 0x6544, 0x6b63, 0x0001, 0x0200, 0xff06,
+0x07ff, 0xffff, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b, 0x000c, 0x000d,
+0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    14, 0x0400, 49L,
+0x0a00, 0x684d, 0x6143, 0x6472, 0x6544, 0x6b63, 0x0001, 0x0200, 0xff06,
+0x07ff, 0xffff, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b, 0x000c, 0x000d,
+0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    15, 0x0400, 49L,
+0x0a00, 0x684d, 0x6143, 0x6472, 0x6544, 0x6b63, 0x0001, 0x0200, 0xff06,
+0x07ff, 0xffff, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b, 0x000c, 0x000d,
+0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    16, 0x0400, 49L,
+0x0a00, 0x684d, 0x6143, 0x6472, 0x6544, 0x6b63, 0x0001, 0x0200, 0xff06,
+0x07ff, 0xffff, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b, 0x000c, 0x000d,
+0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    28, 0x0400, 53L,
+0x0e00, 0x4449, 0x5f43, 0x4f44, 0x4255, 0x454c, 0x4143, 0x4452, 0x0001,
+0x0200, 0xff06, 0x07ff, 0x0000, 0x0008, 0x0009, 0x0a00, 0xffff, 0x010b,
+0x000c, 0x000d, 0x000f, 0x0110, 0x1100, 0x1200, 0xffff, 0x00ff, "\xff"
+    0
+}
+
+IDD_ABOUT DIALOG 23, 17, 189, 205
+STYLE DS_SYSMODAL | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CLASS "bordlg"
+CAPTION "About AMSPoker..."
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "", -1, "BorShade", BSS_HDIP | BSS_LEFT | WS_CHILD | WS_VISIBLE, 0, 172, 189, 3
+ CONTROL "", IDOK, "BorBtn", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 142, 177, 37, 25
+ CONTROL "", IDC_BITMAP1, "BorBtn", BBS_BITMAP | WS_CHILD | WS_VISIBLE, 10, 15, 37, 39
+ CONTROL "", -1, "BorShade", BSS_GROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 5, 9, 178, 158
+ CONTROL "AMSPoker for Windows 95", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 19, 117, 8
+ CONTROL "Version 1.1", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 27, 117, 8
+ CONTROL "by", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 35, 117, 8
+ CONTROL "A.Soares", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 43, 117, 8
+ CONTROL "", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 51, 117, 8
+ CONTROL "AMSPoker for Windows 95 is ShareWare!Please", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 12, 59, 157, 8
+ CONTROL "support shareware by sending 1000$00 to:", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 11, 67, 155, 8
+ CONTROL "", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 75, 117, 8
+ CONTROL "António M.Matos Soares", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 17, 83, 154, 8
+ CONTROL "Rua 25 de Abril,n\xBA42 2\xBAL", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 18, 91, 153, 8
+ CONTROL "3660 São Pedro do Sul", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 14, 99, 154, 8
+ CONTROL "PORTUGAL", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 32, 107, 117, 8
+ CONTROL "This program may be distributed freely provided it", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 11, 145, 167, 8
+ CONTROL "is not modified.", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 12, 153, 167, 8
+ CONTROL "Print ""register.txt"" and mail to the Author's address.", -1, "BorStatic", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 120, 169, 8
+ CONTROL "", -1, "BorShade", BSS_RGROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 5, 180, 121, 19
+ CONTROL "Copyright (c) 1996 A.Soares", -1, "BorStatic", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 12, 186, 107, 8
+}
+1026 BITMAP "redbtn1.bmp"
+3026 BITMAP "redbtn2.bmp"
+1027 BITMAP "blkbtn1.bmp"
+3027 BITMAP "blkbtn2.bmp"
+IDI_POKERICON ICON "amspoker.ico"
+POKERBMP BITMAP "amspoker.bmp"
+#endif
+
